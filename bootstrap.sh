@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -eu
+#!/usr/bin/env bash
 ############################  SETUP PARAMETERS
 app_name='spf13-vim'
 app_dir="$HOME/.spf13-vim-3"

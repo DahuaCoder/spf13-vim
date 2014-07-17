@@ -1,0 +1,21 @@
+" Tagbar
+" nmap <F8> :TagbarToggle<CR>
+" nmap <F8> :TagbarOpenAutoClose<CR>
+nmap <F8> :TagbarOpen f<CR>
+
+" Define new commands
+command RestDoc execute "!tmux new -d updateRestDoc.sh"
+
+" Key mapping
+map <F9> :RestDoc<CR>
+map <F2> :UndotreeToggle<CR>
+
+" peronal setting
+:set tw=99
+
+
+" flake8 setting
+let g:flake8_max_line_length=99
+
+" pyflakes setting
+let g:syntastic_python_checker_args = "--max-line-lenght=99"

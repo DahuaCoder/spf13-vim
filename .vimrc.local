@@ -8,6 +8,9 @@ command RestDoc execute "!tmux new -d updateRestDoc.sh"
 map <F9> :RestDoc<CR>
 map <F2> :UndotreeToggle<CR>
 
+" gvim
+set guifont=Droid\ Sans\ Mono\ 10
+
 " peronal setting
 :set textwidth=99
 

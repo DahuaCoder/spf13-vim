@@ -9,13 +9,14 @@ map <F9> :RestDoc<CR>
 map <F2> :UndotreeToggle<CR>
 
 " peronal setting
-:set tw=99
+:set textwidth=99
 
 " flake8 setting
-let g:flake8_max_line_length=99
+let g:flake8_max_line_length=&textwidth
 
-" pyflakes setting
-let g:syntastic_python_checker_args="--max-line-lenght=99"
+" PyMode
+let g:pymode_lint_options_pep8 =
+    \ {'max_line_length': &textwidth}
 
-" syntastic
-let g:syntastic_python_checkers=['flake8']
+" syntastic setting
+let g:syntastic_python_checker_args="--max-line-length=99"

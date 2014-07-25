@@ -24,6 +24,3 @@ let g:pymodemode_lint_options_pep8 = {'max_line_length' : &textwidth}
 let g:pymodemode_lint_options_pyflakes = {'max_line_length' : &textwidth}
 let g:pymode_run = 1
 let g:pymode_breakpoint = 1
-
-" syntastic setting
-let g:syntastic_python_checker_args="--max-line-length=99"

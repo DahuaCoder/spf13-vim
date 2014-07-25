@@ -1,21 +1,29 @@
-" Tagbar
-nmap <F8> :TagbarOpen f<CR>
-
-" Define new commands
-command RestDoc execute "!tmux new -d updateRestDoc.sh"
 
 " Key mapping
-map <F9> :RestDoc<CR>
-map <F2> :UndotreeToggle<CR>
+:nmap <F2> :UndotreeToggle<CR>
+:nmap <F8> :TagbarToggle<CR>
+:nmap <F9> :RestDoc<CR>
+
+:nmap <C-S> :w<CR>
+:imap <C-S> <ESC>:w<CR>a
+
+:nmap <C-F4> :close<CR>
+:imap <C-F4> <ESC>:close<CR>
+
+" gvim
+set guifont=Droid\ Sans\ Mono\ 10
 
 " peronal setting
-:set tw=99
+:set textwidth=99
 
 " flake8 setting
-let g:flake8_max_line_length=99
+let g:flake8_max_line_length=&textwidth
 
-" pyflakes setting
-let g:syntastic_python_checker_args="--max-line-lenght=99"
+" PyMode
+let g:pymodemode_lint_options_pep8 = {'max_line_length' : &textwidth}
+let g:pymodemode_lint_options_pyflakes = {'max_line_length' : &textwidth}
+let g:pymode_run = 1
+let g:pymode_breakpoint = 1
 
-" syntastic
-let g:syntastic_python_checkers=['flake8']
+" syntastic setting
+let g:syntastic_python_checker_args="--max-line-length=99"
